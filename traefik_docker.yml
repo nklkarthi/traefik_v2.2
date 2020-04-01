@@ -2,7 +2,10 @@
 
 entryPoints:
   web:
-   address: ":8081"
+    address: ":8081"
+
+  websecure:
+    address: ":8443"
 
 # Docker configuration backend
 providers:
@@ -11,4 +14,4 @@ providers:
 
 # API and dashboard configuration
 api:
-  insecure: true
+  insecure: false
