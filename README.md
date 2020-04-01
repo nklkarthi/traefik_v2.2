@@ -3,8 +3,6 @@ Traefik 2.2 with File Provider on CentOS
 
 # systemd Service Unit for Traefik
 
-Adapted from [caddy systemd Service Unit](https://github.com/mholt/caddy/tree/e2635666730e24bfbc2408811be089502338cbc4/dist/init/linux-systemd)
-
 The provided file should work with systemd version 219 or later. It might work with earlier versions.
 The easiest way to check your systemd version is to run `systemctl --version`.
 
