@@ -41,3 +41,16 @@ providers:
 # API and dashboard configuration
 api:
   insecure: true
+
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
+        keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
+
+  certificates:
+    - certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
+      keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
+      stores:
+        - default
