@@ -11,11 +11,7 @@ entryPoints:
 
   websecure:
     address: ":8443"
-    http:
-      tls:
-        certificates:
-            stores:
-              - default
+
 log:
   level: DEBUG
 
@@ -44,9 +40,7 @@ api:
   insecure: true
 
 tls:
-  stores:
-    default:
-      defaultCertificate:
-        certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
-        keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
+  certificates:
+    - certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
+      keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
 
