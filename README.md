@@ -24,7 +24,7 @@ sudo chown root:root /usr/local/bin/traefik
 sudo chmod 755 /usr/local/bin/traefik
 ```
 
-Give the traefik binary the ability to bind to privileged ports (e.g. 80, 443) as a non-root user:
+If you are running privileged ports (e.g. 80, 443) as a non-root user, give the traefik binary the ability to bind:
 
 ```bash
 sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/traefik
