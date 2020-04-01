@@ -13,8 +13,9 @@ entryPoints:
     address: ":8443"
     http:
       tls:
-        certResolver: letsencrypt
-
+        certificates:
+            stores:
+              - default
 log:
   level: DEBUG
 
@@ -23,14 +24,14 @@ log:
 #  docker:
 #    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
 
-certificatesResolvers:
-  letsencrypt:
-    acme:
-      email: aklkarthi@gmail.com
-      storage: /etc/traefik/acme/acme.json
-      httpChallenge:
-        # used during the challenge
-        entryPoint: websecure
+# certificatesResolvers:
+#   letsencrypt:
+#     acme:
+#       email: aklkarthi@gmail.com
+#       storage: /etc/traefik/acme/acme.json
+#       httpChallenge:
+#         # used during the challenge
+#         entryPoint: websecure
 
 # File configuration backend
 providers:
@@ -49,8 +50,3 @@ tls:
         certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
         keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
 
-  certificates:
-    - certFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/fullchain.pem
-      keyFile: /etc/letsencrypt/live/centos-vm1.eastus2.cloudapp.azure.com/privkey.pem
-      stores:
-        - default
