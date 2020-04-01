@@ -15,6 +15,9 @@ entryPoints:
       tls:
         certResolver: letsencrypt
 
+log:
+  level: DEBUG
+
 # Docker configuration backend
 # providers:
 #  docker:
@@ -37,4 +40,4 @@ providers:
 
 # API and dashboard configuration
 api:
-  insecure: false
+  insecure: true
