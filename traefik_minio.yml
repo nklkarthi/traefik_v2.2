@@ -3,7 +3,8 @@ http:
     router0:
       rule: "Host(`centos-vm1.eastus2.cloudapp.azure.com`) && PathPrefix(`/minio`)"
       entryPoints:
-        - web     
+        - web
+        - websecure
       service: minio
 
   services:
