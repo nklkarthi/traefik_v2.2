@@ -24,14 +24,14 @@ log:
 # File configuration backend
 providers:
   file:
-    directory: /etc/traefik/conf
+    filename: /etc/traefik/trafik.yml
     watch: true
 
 tls:
   certificates:
     certFile: /var/www/traefik/certs/fullchain.pem
     keyFile: /var/www/traefik/certs/privkey.pem
-    
+
   stores:
     default:
       defaultCertificate:
