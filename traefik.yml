@@ -3,7 +3,9 @@
 entryPoints:
   web:
     address: ":8081"
-
+  websecure:
+    address: ":8443"
+    
 log:
   level: DEBUG
 
@@ -17,3 +19,5 @@ tls:
     - certFile: /var/www/traefik/certs/fullchain.pem
       keyFile: /var/www/traefik/certs/privkey.pem
 
+api:
+  insecure: true
