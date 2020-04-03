@@ -6,21 +6,7 @@ entryPoints:
 
 log:
   level: DEBUG
-
-# Docker configuration backend
-# providers:
-#  docker:
-#    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
-
-# certificatesResolvers:
-#   letsencrypt:
-#     acme:
-#       email: aklkarthi@gmail.com
-#       storage: /etc/traefik/acme/acme.json
-#       httpChallenge:
-#         # used during the challenge
-#         entryPoint: websecure
-
+  
 # File configuration backend
 providers:
   file:
