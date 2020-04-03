@@ -28,6 +28,10 @@ providers:
     watch: true
 
 tls:
+  certificates:
+    certFile: /var/www/traefik/certs/fullchain.pem
+    keyFile: /var/www/traefik/certs/privkey.pem
+    
   stores:
     default:
       defaultCertificate:
