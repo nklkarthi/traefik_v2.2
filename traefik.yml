@@ -24,7 +24,7 @@ log:
 # File configuration backend
 providers:
   file:
-    filename: /etc/traefik/trafik.yml
+    filename: /etc/traefik/traefik.yml
     watch: true
 
 tls:
