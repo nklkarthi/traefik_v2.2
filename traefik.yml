@@ -6,7 +6,7 @@ entryPoints:
 
 log:
   level: DEBUG
-  
+
 # File configuration backend
 providers:
   file:
