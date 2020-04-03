@@ -3,15 +3,16 @@
 entryPoints:
   web:
     address: ":8081"
-
   websecure:
     address: ":8443"
+
+log:
+  level: DEBUG
 
 # Docker configuration backend
 providers:
   docker:
     defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
 
-# API and dashboard configuration
 api:
-  insecure: false
+  insecure: true
