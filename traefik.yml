@@ -15,15 +15,9 @@ providers:
     filename: /etc/traefik/traefik.yml
 
 tls:
-  stores:
-    default: 
-      defaultCertificate:
-        certFile: /var/www/traefik/certs/fullchain.pem
-        keyFile: /var/www/traefik/certs/privkey.pem
   certificates:
     - certFile: /var/www/traefik/certs/fullchain.pem
       keyFile: /var/www/traefik/certs/privkey.pem
-      store: default
 
 api:
   insecure: true
