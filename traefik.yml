@@ -16,4 +16,4 @@ providers:
     watch: true
 
 api:
-  insecure: true
+  insecure: false
