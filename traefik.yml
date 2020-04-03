@@ -38,4 +38,5 @@ tls:
         certFile: /var/www/traefik/certs/fullchain.pem
         keyFile: /var/www/traefik/certs/privkey.pem
 
-api:     
+api:
+  insecure: true
