@@ -25,7 +25,6 @@ log:
 providers:
   file:
     filename: /etc/traefik/traefik.yml
-    watch: true
 
 tls:
   certificates:
