@@ -27,6 +27,13 @@ providers:
     directory: /etc/traefik/conf
     watch: true
 
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /var/www/traefik/certs/fullchain.pem
+        keyFile: /var/www/traefik/certs/privkey.pem
+
 # API and dashboard configuration
 api:
   insecure: true
