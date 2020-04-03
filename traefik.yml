@@ -12,7 +12,8 @@ log:
 # File configuration backend
 providers:
   file:
-    filename: /etc/traefik/traefik.yml
+    directory: /etc/traefik/conf
+    watch: true
 
 tls:
   stores:
