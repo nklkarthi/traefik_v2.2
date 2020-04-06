@@ -1,7 +1,7 @@
 http:
   routers:
     minio:
-      rule: "PathPrefix(`/minio`)"
+      rule: "Path(`/minio`)"
       entryPoints:
         - web
       service: minio

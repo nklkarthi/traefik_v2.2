@@ -1,7 +1,7 @@
 http:
   routers:
     minio:
-      rule: "PathPrefix(`/gitlab`)"
+      rule: "Path(`/gitlab`)"
       entryPoints:
         - web
       service: gitlab
