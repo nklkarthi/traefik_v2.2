@@ -1,11 +1,11 @@
 http:
   routers:
     minio:
-      rule: "Host(`centos-vm1.eastus2.cloudapp.azure.com`) && Path(`/minio`)"
+      rule: "Path(`/minio`)"
       service: "minio"
 
   services:
     minio:
       loadBalancer:
         servers:
-          - url: "https://91.9.0.5:9199/minio/"
+          - url: "http://httpbin.org/"

@@ -1,16 +1,11 @@
 http:
   routers:
     gitlab:
-      rule: "Host(`centos-vm1.eastus2.cloudapp.azure.com`) && Path(`/gitlab`)"
+      rule: "Path(`/gitlab`)"
       service: "gitlab"
-
-  middlewares:
-    gitlab-replacepath:
-      replacePath:
-        path: "/gitlab"
 
   services:
     gitlab:
       loadBalancer:
         servers:
-          - url: "https://91.9.0.5/"
+          - url: "http://httpbin.org/"
