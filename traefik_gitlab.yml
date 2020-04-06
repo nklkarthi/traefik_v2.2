@@ -1,8 +1,8 @@
 http:
   routers:
     gitlab:
-      rule: "Path(`/gitlab`)"
-      service: gitlab
+      rule: "Host(`centos-vm1.eastus2.cloudapp.azure.com`) && Path(`/gitlab`)"
+      service: "gitlab"
 
   services:
     gitlab:

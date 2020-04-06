@@ -1,8 +1,8 @@
 http:
   routers:
     minio:
-      rule: "Path(`/minio`)"
-      service: minio
+      rule: "Host(`centos-vm1.eastus2.cloudapp.azure.com`) && Path(`/minio`)"
+      service: "minio"
 
   services:
     minio:
