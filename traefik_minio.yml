@@ -3,7 +3,7 @@ http:
     minio:
       rule: "PathPrefix(`/minio`)"
       entryPoints:
-        - web
+        - websecure
       service: minio
       tls: {}
 
@@ -11,4 +11,4 @@ http:
     minio:
       loadBalancer:
         servers:
-          - url: https://centos-vm2.eastus2.cloudapp.azure.com:9199/minio
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"
