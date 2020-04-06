@@ -8,4 +8,4 @@ http:
     minio:
       loadBalancer:
         servers:
-          - url: "http://httpbin.org/"
+          - url: "https://91.9.0.5:9199/minio/"
