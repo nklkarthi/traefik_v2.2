@@ -3,7 +3,7 @@ http:
     minio:
       rule: "PathPrefix(`/minio`)"
       entryPoints:
-        - websecure
+        - web
       service: minio
       tls: {}
 
