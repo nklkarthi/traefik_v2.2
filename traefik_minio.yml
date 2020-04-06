@@ -2,8 +2,6 @@ http:
   routers:
     minio:
       rule: "Path(`/minio`)"
-      entryPoints:
-        - web
       service: minio
 
   services:

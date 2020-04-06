@@ -2,8 +2,6 @@ http:
   routers:
     minio:
       rule: "Path(`/gitlab`)"
-      entryPoints:
-        - web
       service: gitlab
 
   services:
