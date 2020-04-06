@@ -9,6 +9,13 @@ entryPoints:
       certificates:
         - certFile: "/etc/traefik/certs/fullchain.pem"
           keyFile: "/etc/traefik/certs/privkey.pem"
+          stores:
+            - default
+      stores:
+        default:
+          defaultCertificate:
+            certFile: "/etc/traefik/certs/fullchain.pem"
+            keyFile: "/etc/traefik/certs/privkey.pem"
 
 log:
   level: DEBUG
