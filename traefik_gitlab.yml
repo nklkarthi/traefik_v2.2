@@ -8,4 +8,4 @@ http:
     gitlab:
       loadBalancer:
         servers:
-          - url: "https://91.9.0.5/users/sign_in/"
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
