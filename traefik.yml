@@ -5,6 +5,10 @@ entryPoints:
     address: ":8081"
   websecure:
     address: ":8443"
+    tls:
+      certificates:
+        - certFile: "/etc/traefik/certs/fullchain.pem"
+          keyFile: "/etc/traefik/certs/privkey.pem"
 
 log:
   level: DEBUG
