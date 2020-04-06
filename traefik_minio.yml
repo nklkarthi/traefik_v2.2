@@ -10,4 +10,4 @@ http:
     minio:
       loadBalancer:
         servers:
-          - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/minio/"
