@@ -1,6 +1,6 @@
 http:
   routers:
-    minio:
+    gitlab:
       rule: "Path(`/gitlab`)"
       service: gitlab
 
