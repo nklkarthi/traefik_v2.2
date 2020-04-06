@@ -1,7 +1,7 @@
 http:
   routers:
     minio:
-      rule: "Path(`/minio`)"
+      rule: "PathPrefix(`/minio`)"
       service: "minio"
 
   services:

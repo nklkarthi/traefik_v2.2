@@ -1,7 +1,7 @@
 http:
   routers:
     gitlab:
-      rule: "Path(`/gitlab`)"
+      rule: "PathPrefix(`/gitlab`)"
       service: "gitlab"
 
   services:
