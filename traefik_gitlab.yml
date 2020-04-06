@@ -7,7 +7,7 @@ http:
       service: gitlab
 
   services:
-    minio:
+    gitlab:
       loadBalancer:
         servers:
           - url: "https://centos-vm2.eastus2.cloudapp.azure.com/users/sign_in/"
