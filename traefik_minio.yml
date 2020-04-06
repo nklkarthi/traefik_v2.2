@@ -5,10 +5,7 @@ http:
       entryPoints:
         - websecure
       service: minio
-      tls:
-        certificates:
-          - certFile: "/etc/traefik/certs/fullchain.pem"
-            keyFile: "/etc/traefik/certs/privkey.pem"
+      tls: {}
 
   services:
     minio:
