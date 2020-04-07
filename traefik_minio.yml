@@ -2,7 +2,7 @@ http:
   routers:
     minio:
       rule: "PathPrefix(`/minio`)"
-      service: "minio"
+      # service: "minio"
       middlewares:
         - "minio"
 

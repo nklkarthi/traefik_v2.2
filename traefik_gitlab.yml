@@ -2,7 +2,7 @@ http:
   routers:
     gitlab:
       rule: "PathPrefix(`/gitlab`)"
-      service: "gitlab"
+      # service: "gitlab"
       middlewares:
         - "gitlab"
 
