@@ -8,9 +8,9 @@ http:
 
   middlewares:
     gitlab:
-      stripPrefix:
-        prefixes: 
-        - "/gitlab"
+      redirectRegex:
+        regex: "(.*)/gitlab"
+        replacement: "https://centos-vm2.eastus2.cloudapp.azure.com/"
 
   services:
     gitlab:

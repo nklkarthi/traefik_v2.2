@@ -8,9 +8,9 @@ http:
 
   middlewares:
     minio:
-      stripPrefix:
-        prefixes: 
-        - "/minio"
+      redirectRegex:
+        regex: "(.*)/minio"
+        replacement: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"
 
   services:
     minio:
