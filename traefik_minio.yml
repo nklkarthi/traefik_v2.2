@@ -9,11 +9,12 @@ http:
   middlewares:
     minio:
       redirectRegex:
-        regex: "(.*)/minio"
+        regex: "^(.*)/minio"
         replacement: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"
+        permanent: true
 
-  services:
-    minio:
-      loadBalancer:
-        servers:
-          - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"
+  # services:
+  #   minio:
+  #     loadBalancer:
+  #       servers:
+  #         - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"

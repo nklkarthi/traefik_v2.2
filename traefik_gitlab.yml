@@ -9,11 +9,12 @@ http:
   middlewares:
     gitlab:
       redirectRegex:
-        regex: "(.*)/gitlab"
+        regex: "^(.*)/gitlab"
         replacement: "https://centos-vm2.eastus2.cloudapp.azure.com/"
+        permanent: true
 
-  services:
-    gitlab:
-      loadBalancer:
-        servers:
-          - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
+  # services:
+  #   gitlab:
+  #     loadBalancer:
+  #       servers:
+  #         - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
