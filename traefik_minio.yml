@@ -1,11 +1,19 @@
 http:
   routers:
     minio:
-      rule: "PathPrefixStrip(`/minio`)"
+      rule: "PathPrefix(`/minio`)"
       service: "minio"
+      middlewares:
+        - "minio"
+
+  middleware:
+    minio:
+      stripPrefix:
+        prefixes: 
+        - "/minio"
 
   services:
     minio:
       loadBalancer:
         servers:
-          - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199"
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com:9199/"

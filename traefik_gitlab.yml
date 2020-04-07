@@ -1,11 +1,19 @@
 http:
   routers:
     gitlab:
-      rule: "PathPrefixStrip(`/gitlab`)"
+      rule: "PathPrefix(`/gitlab`)"
       service: "gitlab"
+      middlewares:
+        - "gitlab"
 
+  middleware:
+    gitlab:
+      stripPrefix:
+        prefixes: 
+        - "/gitlab"
+        
   services:
     gitlab:
       loadBalancer:
         servers:
-          - url: "https://centos-vm2.eastus2.cloudapp.azure.com"
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
