@@ -2,19 +2,19 @@ http:
   routers:
     gitlab:
       rule: "PathPrefix(`/gitlab`)"
-      # service: "gitlab"
+      service: "gitlab"
       middlewares:
         - "gitlab"
 
   middlewares:
     gitlab:
       redirectRegex:
-        regex: "^(.*)/gitlab"
+        regex: "(https?://[^/]+/[a-z0-9_]+)/"
         replacement: "https://centos-vm2.eastus2.cloudapp.azure.com/"
         permanent: true
 
-  # services:
-  #   gitlab:
-  #     loadBalancer:
-  #       servers:
-  #         - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
+  services:
+    gitlab:
+      loadBalancer:
+        servers:
+          - url: "https://centos-vm2.eastus2.cloudapp.azure.com/"
