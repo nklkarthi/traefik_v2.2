@@ -6,12 +6,12 @@ http:
       middlewares:
         - "gitlab"
 
-  middleware:
+  middlewares:
     gitlab:
       stripPrefix:
         prefixes: 
         - "/gitlab"
-        
+
   services:
     gitlab:
       loadBalancer:

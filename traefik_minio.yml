@@ -6,7 +6,7 @@ http:
       middlewares:
         - "minio"
 
-  middleware:
+  middlewares:
     minio:
       stripPrefix:
         prefixes: 
