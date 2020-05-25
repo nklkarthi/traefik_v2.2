@@ -1,0 +1,29 @@
+http:
+  routers:
+    grafana-router:
+      rule: "PathPrefix(`/grafana`)"
+      entryPoints:
+        - web
+      middlewares:
+        - "grafana-chain"
+      service: "grafana-service"
+  middlewares:
+    grafana-chain:
+      chain:
+        middlewares:
+          - grafana-strip
+          - grafana-redirect
+    grafana-redirect:
+      redirectScheme:
+        scheme: "http"
+        port: 3000
+    grafana-strip:
+      stripPrefix:
+        prefixes:
+          - "/grafana/"
+          - "/grafana"
+  services:
+    grafana-service:
+      loadBalancer:
+        servers:
+          - url: "http://48.4.0.4/"
