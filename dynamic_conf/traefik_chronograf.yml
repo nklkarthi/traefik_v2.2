@@ -1,0 +1,29 @@
+http:
+  routers:
+    chronograf-router:
+      rule: "PathPrefix(`/chronograf`)"
+      entryPoints:
+        - web
+      middlewares:
+        - "chronograf-chain"
+      service: "chronograf-service"
+  middlewares:
+    chronograf-chain:
+      chain:
+        middlewares:
+         - chronograf-strip
+         - chronograf-redirect      
+    chronograf-redirect:
+      redirectScheme:
+        scheme: "http"      
+        port: 8888
+    chronograf-strip:    
+      stripPrefix:
+        prefixes:
+          - "/chronograf/"
+          - "/chronograf"        
+  services:
+    chronograf-service:
+      loadBalancer:
+        servers:
+          - url: "http://48.4.0.4/"
